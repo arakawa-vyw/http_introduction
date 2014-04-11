@@ -1,2 +1,17 @@
-<h1>RequestMethods#index</h1>
-<p>Find me in app/views/request_methods/index.html.erb</p>
+<h1>リクエストメソッド</h1>
+
+<h2>Get</h2>
+<%= link_to "get", get_request_methods_path %>
+
+<h2>Post</h2>
+<%= form_tag post_request_methods_path do %>
+  <table>
+    <tr><td>
+        <%= text_field_tag "name", "Taro Yamada" %>
+    </td></tr>
+    <tr><td>
+        <%= submit_tag "post" %>
+    </td></tr>
+  </table>
+<% end #form_tag %>
+
