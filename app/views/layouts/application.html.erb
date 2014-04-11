@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Http</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Http</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <%= render_breadcrumbs %>
 
-<%= render "share/request_headers" %>
+    <%= yield %>
 
-</body>
+    <%= render "share/request_info" %>
+
+    <br/>
+    <br/>
+  </body>
 </html>

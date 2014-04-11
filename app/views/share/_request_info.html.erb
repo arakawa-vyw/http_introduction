@@ -1,0 +1,27 @@
+<hr/>
+<h2>Request Headers</h2>
+<table>
+<% request_headers.each do |k, v| %>
+  <tr>
+    <td><%= k %></td>
+    <td><%= v %></td>
+  </tr>
+<% end #request.headers.each %>
+</table>
+
+<hr/>
+<h2>Request Body</h2>
+<%= request.raw_post %>
+
+<% if false #non display %>
+<h3>URL Decoded</h3>
+<table>
+<% params.each do |k, v| %>
+  <tr>
+    <td><%= k %></td>
+    <td><%= v %></td>
+  </tr>
+<% end #params.each %>
+</table>
+<% end #non display %>
+
