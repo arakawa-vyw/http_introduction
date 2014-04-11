@@ -1,8 +1,9 @@
 Http::Application.routes.draw do
   root "home#index"
 
-  resource :request_methods, only: [:index] do
+  resource :request_methods, only: [] do
     collection do
+      get :index
       get :get
       post :post
       put :put
