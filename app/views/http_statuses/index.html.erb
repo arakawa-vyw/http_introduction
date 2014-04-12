@@ -1,0 +1,36 @@
+<h1>HTTPステータス</h1>
+
+<hr/>
+<h2>1xx: Informational</h2>
+
+<hr/>
+<h2>2xx: Success</h2>
+<ul>
+  <li><%= link_to "200: OK", url_for(controller: :http_statuses, action: :success_200) %></li>
+</ul>
+
+<hr/>
+<h2>3xx: Redirection</h2>
+<ul>
+  <li><%= link_to "300: Moved Permanently", url_for(controller: :http_statuses, action: :redirection_301) %></li>
+  <li><%= link_to "302: Found(Moved Temporarily)", url_for(controller: :http_statuses, action: :redirection_302) %></li>
+  <li><%= link_to "304: Not Modified(Last-Modified)",  url_for(controller: :http_statuses, action: :redirection_304_last_modified) %></li>
+  <li><%= link_to "304: Not Modified(ETag)",  url_for(controller: :http_statuses, action: :redirection_304_etag) %></li>
+</ul>
+
+<hr/>
+<h2>4xx: Client Error</h2>
+<ul>
+  <li><%= link_to "400: Bad Request", "%" %></li>
+  <li><%= link_to "401: Unauthorized", url_for(controller: :http_statuses, action: :client_error_401_unauthorized) %></li>
+  <li><%= link_to "403: Forbidden", url_for(controller: :http_statuses, action: :client_error_403_forbidden) %></li>
+  <li><%= link_to "404: Not Found", "/http_statuses/client_error_404_not_found" %></li>
+</ul>
+
+<hr/>
+<h2>5xx: Server Error</h2>
+<ul>
+  <li><%= link_to "500: Internal Server Error", url_for(controller: :http_statuses, action: :server_error_500_internal_server_error) %></li>
+  <li><%= link_to "503: Servie Unavailable", url_for(controller: :http_statuses, action: :server_error_503_service_unavailable) %></li>
+</ul>
+

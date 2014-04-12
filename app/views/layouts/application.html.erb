@@ -12,7 +12,9 @@
 
     <%= yield %>
 
-    <%= render "share/request_info" %>
+    <% unless @non_request_info %>
+      <%= render "share/request_info" %>
+    <% end %>
 
     <br/>
     <br/>

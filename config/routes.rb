@@ -11,12 +11,18 @@ Http::Application.routes.draw do
     end
   end
    
-  resource :http_status, only: [] do
+  resource :http_statuses, only: [] do
     collection do
       get :index
       get :success_200
       get :redirection_301
       get :redirection_302
+      get :redirection_304_etag
+      get :redirection_304_last_modified
+      get :client_error_401_unauthorized
+      get :client_error_403_forbidden
+      get :server_error_500_internal_server_error
+      get :server_error_503_service_unavailable
     end
   end
 
