@@ -1,0 +1,2 @@
+module HttpStatusHelper
+end
