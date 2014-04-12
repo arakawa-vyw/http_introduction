@@ -1,0 +1,2 @@
+class HttpHeadersController < ApplicationController
+end
