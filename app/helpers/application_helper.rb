@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def request_line
+    "#{request.headers["REQUEST_METHOD"]} #{request.headers["HTTP_VERSION"]}"
+  end
+
   def request_headers
     http_headers = request.env.select { |k, v| k.start_with?('HTTP_') }
     headers = http_headers.inject({}) do |a, (k, v)|
