@@ -1,0 +1,2 @@
+class HttpStatusesController < ApplicationController
+end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HttpStatusControllerTest < ActionController::TestCase
+class HttpStatusesControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

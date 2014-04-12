@@ -10,6 +10,16 @@ Http::Application.routes.draw do
       delete :delete
     end
   end
+   
+  resource :http_status, only: [] do
+    collection do
+      get :index
+      get :success_200
+      get :redirection_301
+      get :redirection_302
+    end
+  end
+
   # resource :request_methods, only: [] do
   # resource :request_methods, only: [:index] do
   #   collection do
