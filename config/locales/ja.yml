@@ -19,9 +19,9 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello"
-  request_methods: "Request Methods"
-  http_statuses: "HTTP Status"
-  http_headers: "HTTP Headers"
+ja:
+  hello: "こんにちは"
+  request_methods: "リクエストメソッド"
+  http_statuses: "HTTPステータス"
+  http_headers: "HTTPヘッダ"
 

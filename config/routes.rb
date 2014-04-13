@@ -26,6 +26,13 @@ Http::Application.routes.draw do
     end
   end
 
+  resource :http_headers, only: [] do
+    collection do
+      get :index
+      get :accept_language
+    end
+  end
+
   # resource :request_methods, only: [] do
   # resource :request_methods, only: [:index] do
   #   collection do

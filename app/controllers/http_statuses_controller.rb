@@ -1,9 +1,6 @@
 class HttpStatusesController < ApplicationController
   http_basic_authenticate_with name: "admin", password: "pass", only: [:client_error_401_unauthorized]
 
-  add_breadcrumb "home", :root_path
-  add_breadcrumb "HTTPステータス", :http_statuses_path
-
   def index
   end
 
@@ -48,5 +45,11 @@ class HttpStatusesController < ApplicationController
 
   def server_error_503_service_unavailable
     render status: :service_unavailable, text: "現在メンテナンス中です。。。"
+  end
+
+  private
+  def set_breadcrumb
+    add_breadcrumb "Home", :root_path
+    add_breadcrumb I18n.t("http_statuses"), :http_statuses_path
   end
 end
