@@ -30,6 +30,9 @@ Http::Application.routes.draw do
     collection do
       get :index
       get :accept_language
+      get :cache_control_none
+      get :cache_control_max_age
+      get :cache_control_no_cache
     end
   end
 

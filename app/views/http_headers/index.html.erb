@@ -3,5 +3,8 @@
 <hr/>
 <ul>
   <li><%= link_to "Accept-Language", url_for(controller: :http_headers, action: :accept_language) %></li>
+  <li><%= link_to "Cache-Control: (none)", url_for(controller: :http_headers, action: :cache_control_none) %></li>
+  <li><%= link_to "Cache-Control: max-age", url_for(controller: :http_headers, action: :cache_control_max_age) %></li>
+  <li><%= link_to "Cache-Control: max-age=no-cache", url_for(controller: :http_headers, action: :cache_control_no_cache) %></li>
 </ul>
 
