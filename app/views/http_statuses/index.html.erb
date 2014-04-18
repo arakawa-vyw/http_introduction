@@ -12,7 +12,7 @@
 <hr/>
 <h2>3xx: Redirection</h2>
 <ul>
-  <li><%= link_to "300: Moved Permanently", url_for(controller: :http_statuses, action: :redirection_301) %></li>
+  <li><%= link_to "301: Moved Permanently", url_for(controller: :http_statuses, action: :redirection_301) %></li>
   <li><%= link_to "302: Found(Moved Temporarily)", url_for(controller: :http_statuses, action: :redirection_302) %></li>
   <li><%= link_to "304: Not Modified(Last-Modified)",  url_for(controller: :http_statuses, action: :redirection_304_last_modified) %></li>
   <li><%= link_to "304: Not Modified(ETag)",  url_for(controller: :http_statuses, action: :redirection_304_etag) %></li>
